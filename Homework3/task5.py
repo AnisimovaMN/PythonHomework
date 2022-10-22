@@ -7,16 +7,16 @@
 k = int(input('Введите число: '))
 n1 = 0
 n2 = 1
-z = [1, 0, 1]
+a = [1, 0, 1]
 count = 1
 for i in range(k-1):
     n1, n2 = n2, n2 + n1
-    z.append(n2)
+    a.append(n2)
     if count == 0:
-        z.insert(0, n2)
+        a.insert(0, n2)
         count = 1
     else:
-        z.insert(0, -n2)
+        a.insert(0, -n2)
         count = 0
     
-print(z)
+print(a)
