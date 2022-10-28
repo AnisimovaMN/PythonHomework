@@ -21,19 +21,19 @@ def create_coef(k):
     
 # создание многочлена в виде строки 
 def create_str(pol):
-    lst= pol[::-1]
+    lst = pol[::-1]
     parts = ''
     if len(lst) < 1:
         parts = 'x = 0'
     else:
         for i in range(len(lst)):
             if i != len(lst) - 1 and lst[i] != 0 and i != len(lst) - 2:
-                parts += f'{lst[i]}x^{len(lst)-i-1}'
-                if lst[i+1] != 0:
+                parts += f'{lst[i]}x^{len(lst) - i - 1}'
+                if lst[i + 1] != 0:
                     parts += ' + '
             elif i == len(lst) - 2 and lst[i] != 0:
                 parts += f'{lst[i]}x'
-                if lst[i+1] != 0:
+                if lst[i + 1] != 0:
                     parts += ' + '
             elif i == len(lst) - 1 and lst[i] != 0:
                 parts += f'{lst[i]} = 0'

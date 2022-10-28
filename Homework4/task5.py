@@ -26,7 +26,7 @@ def create_str(pol):
     else:
         for i in range(len(lst)):
             if i != len(lst) - 1 and lst[i] != 0 and i != len(lst) - 2:
-                parts += f'{lst[i]}x^{len(lst)-i-1}'
+                parts += f'{lst[i]}x^{len(lst) - i - 1}'
                 if lst[i + 1] != 0 or lst[i + 2] != 0:
                     parts += ' + '
             elif i == len(lst) - 2 and lst[i] != 0:
@@ -69,7 +69,7 @@ def calc_pol(rec):
         l -= 1
         k = 1
     d = 1
-    i = l-1 
+    i = l - 1 
     while i >= 0:
         if degree_pol(rec[i]) != -1 and degree_pol(rec[i]) == d:
             lst.append(coef_pol(rec[i]))
@@ -110,7 +110,7 @@ else:
     l2 = len(lst2)
     for i in range(l1, l2):
         lst_res.append(lst2[i])
-write_file("file3_HW4.txt", create_str(lst_res))
+write_file('file3_HW4.txt', create_str(lst_res))
 
 with open('file3_HW4.txt', 'r') as data:
     rec3 = data.readlines()
