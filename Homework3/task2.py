@@ -7,7 +7,7 @@
 
 list = [3, 5, 4, 6, 2]
 lst = []
-for i in range(int(len(list) / 2 + 0.5)):
-    lst.append(list[i] * list[(len(list) - i - 1)])
+for i in range(len(list) + 1 // 2):
+    lst.append(list[i] * list[len(list) - i - 1])
 
 print(lst)

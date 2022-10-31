@@ -2,7 +2,6 @@
 # список неповторяющихся элементов исходной последовательности.
 
 lst = list(map(int, input('Введите последовательность чисел через пробел: ').split()))
-res_lst = []
-[res_lst.append(i) for i in set(lst) if i not in res_lst]
+res_lst = [i for i in set(lst) if lst.count(i) == 1]
 
 print(res_lst)

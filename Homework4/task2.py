@@ -4,14 +4,12 @@
 n = int(input('Введите  натуральное число: '))
 lst = []
 i = 2
-if n > 1:
-    while i <= n:
+while i <= n:
         if n % i == 0:
             lst.append(i)
             n //= i
             i = 2
         else:        
             i += 1
-lst.append(1)
 
-print(sorted(list(set(lst))))
+print(sorted(list(lst)))
